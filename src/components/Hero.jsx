@@ -112,11 +112,11 @@ const Hero = () => {
       </div>
       <div
         className="montserrat-bold p-3 border-2 
-        relative overflow-hidden w-44 text-center rounded-lg 
-      text-slate-900 group transition-colors duration-300 hover:border-cyan-400  hover:text-white md:text-xl md:w-52"
+        relative overflow-hidden w-40 text-center rounded-lg text-sm 
+      text-slate-900 group transition-colors duration-300 hover:border-cyan-400  hover:text-white"
       >
         <div className="relative z-10">
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center justify-center">
             <FaDownload />
             Download CV
           </div>
@@ -135,7 +135,7 @@ const Hero = () => {
             key={index}
             className={`${
               isClickedList === index ? 'text-cyan-400 font-bold' : ''
-            } flex group items-center gap-2 w-56 md:text-xl`}
+            } flex group items-center gap-2 w-56 md:text-lg`}
             onClick={() => handleActiveLink(index)}
           >
             <div

@@ -49,7 +49,7 @@ const App = () => {
       />
       {/* Animated gradient blob */}
       <div
-        className="pointer-events-none fixed blur-3xl opacity-20 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full transition-all duration-100 ease-out"
+        className="pointer-events-none fixed blur-3xl opacity-15 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full transition-all duration-100 ease-out"
         style={{
           width: '700px',
           height: '700px',
