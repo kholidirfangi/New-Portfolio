@@ -33,16 +33,16 @@ const Card = () => {
           href={item.link}
           target="_blank"
           key={index}
-          className="flex gap-5 md:gap-10 hover:bg-cyan-50/50 backdrop-blur-sm rounded-lg hover:shadow-md border-2 hover:border-cyan-300 p-3 border-transparent cursor-pointer "
+          className="flex gap-5 md:gap-10 hover:bg-cyan-200/10 backdrop-blur-sm rounded-lg hover:shadow-md border-2 hover:border-cyan-300 p-3 border-transparent cursor-pointer "
         >
           <div className="w-1/3 mt-3">
             <img src={item.image} className="w-full" />
           </div>
           <div className="w-2/3">
-            <h3 className="montserrat-bold text-slate-800 hover:text-cyan-400 mb-3 md:text-2xl">
+            <h3 className="montserrat-bold text-slate-800 hover:text-cyan-400 mb-3 md:text-2xl dark:text-slate-200">
               {item.title}
             </h3>
-            <p className="montserrat-regular text-slate-600 md:text-xl text-justify">
+            <p className="montserrat-regular text-slate-600 md:text-xl text-justify dark:text-slate-400">
               {item.desc}
             </p>
           </div>

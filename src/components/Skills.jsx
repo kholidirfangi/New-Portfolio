@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { FaCss3, FaGitAlt, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 
@@ -30,32 +29,11 @@ const icons = [
 ];
 
 const Skills = () => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const header = document.getElementById('skills-header');
-      const stickyStart = header.offsetTop; // Position where the sticky effect starts
-
-      if (window.scrollY >= stickyStart) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <div id="skills" className="py-5">
       <h2
         id="skills-header"
-        className={`montserrat-bold md:text-2xl sticky top-0 left-0 right-0 z-10 transition-colors duration-300 px-5 py-3 mb-5 xl:hidden ${
-          isSticky ? 'bg-cyan-400 text-white' : 'bg-transparent text-slate-800'
-        }`}
+        className="font-bold text-lg md:text-2xl px-5 py-3 mb-5 xl:hidden dark:text-slate-200"
       >
         SKILLS
       </h2>

@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react';
-import {
-  FaDownload,
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-} from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
   const [isClickedList, setIsClickedList] = useState();
@@ -70,17 +64,18 @@ const Hero = () => {
   };
 
   return (
-    <header className="p-5">
-      <h1 className="text-4xl mt-5 montserrat-extrabold text-slate-800 hover:text-cyan-400 md:text-5xl">
+    <header className="py-5 px-5 xl:px-0">
+      <h1 className="text-4xl mt-5 montserrat-extrabold text-slate-800 hover:text-cyan-400 md:text-5xl dark:text-slate-100">
         Kholid Irfangi
       </h1>
-      <h3 className="montserrat-bold text-xl text-slate-700 my-2 h-7 md:text-2xl">
+
+      <h3 className="montserrat-bold text-xl text-slate-700 my-2 h-7 md:text-2xl dark:text-slate-200">
         {displayText}
       </h3>
-      <p className="text-slate-600 text-lg md:text-xl">
+      <p className="text-slate-600 text-lg md:text-xl dark:text-slate-400">
         I build accessible, pixel-perfect digital experiences for the web.
       </p>
-      <div className="flex gap-5 my-5">
+      <div className="flex gap-5 my-5 dark:text-slate-400">
         <a
           className="hover:text-cyan-400"
           href="https://github.com/kholidirfangi"
@@ -110,23 +105,6 @@ const Hero = () => {
           <FaFacebook size={28} />
         </a>
       </div>
-      <div
-        className="montserrat-bold p-3 border-2 
-        relative overflow-hidden w-40 text-center rounded-lg text-sm 
-      text-slate-900 group transition-colors duration-300 hover:border-cyan-400  hover:text-white"
-      >
-        <div className="relative z-10">
-          <div className="flex gap-2 items-center justify-center">
-            <FaDownload />
-            Download CV
-          </div>
-        </div>
-        <div
-          className="absolute inset-0 bg-cyan-400 
-        translate-x-[-100%] group-hover:translate-x-0
-        transition-transform duration-300"
-        ></div>
-      </div>
 
       <div className="flex flex-col gap-3 mt-5">
         {links.map((list, index) => (
@@ -135,7 +113,7 @@ const Hero = () => {
             key={index}
             className={`${
               isClickedList === index ? 'text-cyan-400 font-bold' : ''
-            } flex group items-center gap-2 w-56 md:text-lg`}
+            } flex group items-center gap-2 w-56 md:text-lg dark:text-slate-100`}
             onClick={() => handleActiveLink(index)}
           >
             <div

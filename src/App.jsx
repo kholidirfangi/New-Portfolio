@@ -3,31 +3,38 @@ import About from './components/About';
 import Hero from './components/Hero';
 import Project from './components/Project';
 import Skills from './components/Skills';
+import { FcIdea, FcNoIdea } from 'react-icons/fc';
 
 const App = () => {
-   const [position, setPosition] = useState({ x: 0, y: 0 });
-   const [isHovered, setIsHovered] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
-   useEffect(() => {
-     const handleMouseMove = (e) => {
-       // Add a smooth animation using transformed coordinates
-       const x = e.clientX;
-       const y = e.clientY;
+  const handleDarkMode = () => {
+    setIsDark(!isDark);
+     document.querySelector('html').classList.toggle('dark');
+  }
 
-       setPosition({ x, y });
-     };
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      // Add a smooth animation using transformed coordinates
+      const x = e.clientX;
+      const y = e.clientY;
 
-     if (isHovered) {
-       window.addEventListener('mousemove', handleMouseMove);
-     }
+      setPosition({ x, y });
+    };
 
-     return () => {
-       window.removeEventListener('mousemove', handleMouseMove);
-     };
-   }, [isHovered]);
+    if (isHovered) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [isHovered]);
   return (
     <main
-      className="selection:bg-cyan-400 md:px-10 xl:flex xl:gap-10 relative w-full h-screen cursor-default"
+      className="selection:bg-cyan-400 md:px-10 xl:flex xl:gap-10 relative w-screen cursor-default xl:px-20 dark:bg-slate-900"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -56,6 +63,13 @@ const App = () => {
           transform: `translate(${position.x - 385}px, ${position.y - 350}px)`,
         }}
       />
+      <div className="absolute top-2 right-5" onClick={handleDarkMode}>
+        {isDark ? (
+          <FcIdea size={24} />
+        ) : (
+          <FcNoIdea size={24} />
+        )}
+      </div>
     </main>
   );
 };
