@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import About from './components/About';
-import Hero from './components/Hero';
-import Project from './components/Project';
-import Skills from './components/Skills';
-import { FcIdea, FcNoIdea } from 'react-icons/fc';
+import { useEffect, useState } from "react";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import { FcIdea, FcNoIdea } from "react-icons/fc";
 
 const App = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -12,8 +12,8 @@ const App = () => {
 
   const handleDarkMode = () => {
     setIsDark(!isDark);
-     document.querySelector('html').classList.toggle('dark');
-  }
+    document.querySelector("html").classList.toggle("dark");
+  };
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -25,16 +25,16 @@ const App = () => {
     };
 
     if (isHovered) {
-      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener("mousemove", handleMouseMove);
     }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, [isHovered]);
   return (
     <main
-      className="selection:bg-cyan-400 md:px-10 xl:flex xl:gap-10 relative w-screen cursor-default xl:px-20 dark:bg-slate-900"
+      className="selection:bg-cyan-400 md:px-10 xl:flex xl:gap-10 relative w-screen cursor-default xl:px-20 bg-gradient-to-br from-cyan-100 to-teal-100 dark:bg-slate-900 dark:bg-none scroll-auto"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -45,7 +45,7 @@ const App = () => {
       <div className="xl:w-1/2">
         <About />
         <Skills />
-        <Project />
+        <Projects />
       </div>
       {/* // Custom cursor */}
       <div
@@ -58,17 +58,13 @@ const App = () => {
       <div
         className="pointer-events-none fixed blur-3xl opacity-15 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full transition-all duration-100 ease-out"
         style={{
-          width: '700px',
-          height: '700px',
+          width: "700px",
+          height: "700px",
           transform: `translate(${position.x - 385}px, ${position.y - 350}px)`,
         }}
       />
       <div className="absolute top-2 right-5" onClick={handleDarkMode}>
-        {isDark ? (
-          <FcIdea size={24} />
-        ) : (
-          <FcNoIdea size={24} />
-        )}
+        {isDark ? <FcIdea size={24} /> : <FcNoIdea size={24} />}
       </div>
     </main>
   );
