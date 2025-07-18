@@ -12,14 +12,14 @@ const data = [
     image: "./assets/image/amanahfc.png",
     title: "Fotocopy Amanah Jaya Landing Page",
     desc: "This is a landing page for a Photocopy bussines.This landing page help the bussines to show in internet and reach more potential customer",
-    link: "https://amanah-fc.site/",
+    link: "https://amanah-fc.vercel.app/",
     tools: ["Vite", "React", "Tailwind CSS"],
   },
   {
     image: "./assets/image/cartshop.png",
-    title: "Product List With Cart Main",
+    title: "Caffe Shop",
     desc: "A simple E-commerce, you can add the item to cart and show the total of your buy and then you can confirm the buy",
-    link: "https://product-list-with-cart-main-dusky.vercel.app/",
+    link: "https://caffe-shop-one.vercel.app/",
     tools: ["Vite", "React", "Tailwind CSS"],
   },
   {
