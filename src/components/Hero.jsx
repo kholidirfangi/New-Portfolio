@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useEffect, useState } from "react";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   const [isClickedList, setIsClickedList] = useState();
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed] = useState(50);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const roles = ['Frontend Engineer', 'Web Developer', 'React Developer'];
+  const roles = ["Frontend Engineer", "Web Developer", "React Developer"];
   const deletingSpeed = 50;
   const delayBetweenWords = 500;
 
@@ -46,16 +46,16 @@ const Hero = () => {
 
   const links = [
     {
-      name: 'ABOUT ME',
-      href: '#about',
+      name: "About Me",
+      href: "#about",
     },
     {
-      name: 'SKILLS',
-      href: '#skills',
+      name: "Skills",
+      href: "#skills",
     },
     {
-      name: 'PROJECTS',
-      href: '#projects',
+      name: "Projects",
+      href: "#projects",
     },
   ];
 
@@ -64,12 +64,12 @@ const Hero = () => {
   };
 
   return (
-    <header className="py-5 px-5 xl:px-0">
-      <h1 className="text-4xl mt-5 montserrat-extrabold text-slate-800 hover:text-cyan-400 md:text-5xl dark:text-slate-100">
+    <main className="py-5 px-5 xl:px-0">
+      <h1 className="text-4xl mt-5 text-slate-800 hover:text-cyan-400 md:text-5xl dark:text-slate-100 font-bold">
         Kholid Irfangi
       </h1>
 
-      <h3 className="montserrat-bold text-xl text-slate-700 my-2 h-7 md:text-2xl dark:text-slate-200">
+      <h3 className="montserrat-bold text-xl text-slate-700 my-2 h-7 md:text-2xl dark:text-slate-200 font-bitcount">
         {displayText}
       </h3>
       <p className="text-slate-600 text-lg md:text-xl dark:text-slate-400">
@@ -112,13 +112,13 @@ const Hero = () => {
             href={list.href}
             key={index}
             className={`${
-              isClickedList === index ? 'text-cyan-400 font-bold' : ''
+              isClickedList === index ? "text-cyan-400 font-bold" : ""
             } flex group items-center gap-2 w-56 md:text-lg dark:text-slate-100`}
             onClick={() => handleActiveLink(index)}
           >
             <div
               className={`${
-                isClickedList === index ? 'w-28 bg-cyan-400' : 'w-3'
+                isClickedList === index ? "w-28 bg-cyan-400" : "w-2"
               } group-hover:w-28 group-hover:bg-cyan-400 h-1 bg-current rounded-full transition-all duration-300 ease-in-out cursor-pointer}`}
             ></div>
             <div className="group-hover:text-cyan-400 group-hover:font-bold">
@@ -127,7 +127,7 @@ const Hero = () => {
           </a>
         ))}
       </div>
-    </header>
+    </main>
   );
 };
 
