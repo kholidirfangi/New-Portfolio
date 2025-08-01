@@ -2,8 +2,15 @@ import Badge from "./Badge";
 
 const data = [
   {
+    image: "./assets/image/desktop-preview.jpg",
+    title: "Todo App",
+    desc: "This is a Todo App for schedule your productivity",
+    link: "https://todo-app-one-theta-37.vercel.app/",
+    tools: ["Vite", "React", "Tailwind CSS", "Typescript"],
+  },
+  {
     image: "./assets/image/portfolio-salis.png",
-    title: "Portfolio Salis | Designer Graphic",
+    title: "Portfolio Designer Graphic",
     desc: "This is a landing page for a porfolio a graphic designer. This landing page show the project and active queue",
     link: "https://portfolio-salis.vercel.app/",
     tools: ["Vite", "React", "Tailwind CSS", "Firebase"],
