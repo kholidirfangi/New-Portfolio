@@ -2,6 +2,13 @@ import Badge from "./Badge";
 
 const data = [
   {
+    image: "./assets/image/weather-app.png",
+    title: "Weather App",
+    desc: "You can search city and see how the sky looking there.",
+    link: "https://weather-app-amber-seven-14.vercel.app/",
+    tools: ["Vite", "React", "Tailwind CSS", "Typescript"],
+  },
+  {
     image: "./assets/image/desktop-preview.jpg",
     title: "Todo App",
     desc: "This is a Todo App for schedule your productivity",
