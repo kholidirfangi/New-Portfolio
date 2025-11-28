@@ -6,42 +6,42 @@ const data = [
     title: "Weather App",
     desc: "You can search city and see how the sky looking there.",
     link: "https://weather-app-amber-seven-14.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS", "Typescript"],
+    tools: ["Vite", "React", "Tailwind", "Typescript"],
   },
   {
     image: "./assets/image/desktop-preview.jpg",
     title: "Todo App",
     desc: "This is a Todo App for schedule your productivity",
     link: "https://todo-app-one-theta-37.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS", "Typescript"],
+    tools: ["Vite", "React", "Tailwind", "Typescript"],
   },
   {
     image: "./assets/image/portfolio-salis.png",
     title: "Portfolio Designer Graphic",
     desc: "This is a landing page for a porfolio a graphic designer. This landing page show the project and active queue",
     link: "https://portfolio-salis.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS", "Firebase"],
+    tools: ["Vite", "React", "Tailwind", "Firebase"],
   },
   {
     image: "./assets/image/amanahfc.png",
     title: "Fotocopy Amanah Jaya Landing Page",
     desc: "This is a landing page for a Photocopy bussines.This landing page help the bussines to show in internet and reach more potential customer",
     link: "https://amanah-fc.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS"],
+    tools: ["Vite", "React", "Tailwind"],
   },
   {
     image: "./assets/image/cartshop.png",
     title: "Caffe Shop",
     desc: "A simple E-commerce, you can add the item to cart and show the total of your buy and then you can confirm the buy",
     link: "https://caffe-shop-one.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS"],
+    tools: ["Vite", "React", "Tailwind"],
   },
   {
     image: "./assets/image/easybank.png",
     title: "Easybank Landing Page",
     desc: "A Landing Page for digital banking to easily the customer to access the information for the bank",
     link: "https://easybank-seven-virid.vercel.app/",
-    tools: ["Vite", "React", "Tailwind CSS"],
+    tools: ["Vite", "React", "Tailwind"],
   },
   {
     image: "./assets/image/notesapp.png",
@@ -55,13 +55,14 @@ const data = [
 const Card = () => {
   return (
     <div
-      className="flex flex-col gap-5 px-5
+      className="flex flex-col gap-5 px-5 
     "
     >
       {data.map((item, index) => (
         <div
           key={index}
-          className="flex flex-col md:flex-row gap-5 md:gap-10 hover:bg-cyan-200/10 backdrop-blur-sm rounded-lg hover:shadow-md border-2 hover:border-cyan-300 p-3 border-transparent px-5 dark:bg-slate-800"
+          className="flex bg-white flex-col md:flex-row gap-5 md:gap-10 backdrop-blur-sm rounded-2xl border-2 hover:border-cyan-300 p-3 border-transparent px-5 dark:bg-slate-800 duration-200"
+          style={{ filter: "drop-shadow(0 10px 20px rgba(6, 182, 212, 0.5))" }}
         >
           <div className="w-full md:w-1/3 mt-3">
             <img src={item.image} className="w-full rounded-md" />

@@ -3,7 +3,6 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import { FcIdea, FcNoIdea } from "react-icons/fc";
 
 const App = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -34,12 +33,25 @@ const App = () => {
   }, [isHovered]);
   return (
     <main
-      className="selection:bg-cyan-400 md:px-10 xl:flex xl:gap-10 relative w-screen cursor-default xl:px-20 bg-gradient-to-br from-cyan-100 to-teal-100 dark:bg-slate-900 dark:bg-none scroll-auto"
+      className="relative selection:bg-cyan-400 bg-white md:px-10 xl:flex xl:gap-10 w-screen cursor-default xl:px-20 dark:bg-slate-900 dark:bg-none scroll-auto pb-40 xl:pb-10"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className=" xl:w-1/2 xl:fixed top-0 bottom-0">
         <Hero />
+        <div
+          className="absolute -right-3 md:-left-10 bottom-5 z-10 "
+          onClick={handleDarkMode}
+        >
+          {isDark ? (
+            <img src="./assets/image/lamp.png" className="w-40" />
+          ) : (
+            <img src="./assets/image/lamp.png" className="w-40 grayscale" />
+          )}
+        </div>
+        <p className="absolute right-2 md:left-0 bottom-5 z-10 dark:text-white text-slate-800">
+          copyright &copy; {new Date().getFullYear()}
+        </p>
       </div>
       <div className="xl:w-1/2"></div>
       <div className="xl:w-1/2">
@@ -63,9 +75,6 @@ const App = () => {
           transform: `translate(${position.x - 385}px, ${position.y - 350}px)`,
         }}
       />
-      <div className="absolute top-2 right-5" onClick={handleDarkMode}>
-        {isDark ? <FcIdea size={24} /> : <FcNoIdea size={24} />}
-      </div>
     </main>
   );
 };

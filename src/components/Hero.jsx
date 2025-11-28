@@ -46,15 +46,15 @@ const Hero = () => {
 
   const links = [
     {
-      name: "About Me",
+      name: "ABOUT ME",
       href: "#about",
     },
     {
-      name: "Skills",
+      name: "SKILLS",
       href: "#skills",
     },
     {
-      name: "Projects",
+      name: "PROJECTS",
       href: "#projects",
     },
   ];
@@ -64,9 +64,9 @@ const Hero = () => {
   };
 
   return (
-    <main className="py-5 px-5 xl:px-0">
+    <main className="relative py-5 px-5 xl:px-0">
       <h1 className="text-4xl mt-5 text-slate-800 hover:text-cyan-400 md:text-5xl dark:text-slate-100 font-bold">
-        Kholid Irfangi
+        KHOLID IRFANGI.
       </h1>
 
       <h3 className="montserrat-bold text-xl text-slate-700 my-2 h-7 md:text-2xl dark:text-slate-200 font-bitcount">
@@ -106,7 +106,7 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="flex flex-col gap-3 mt-5">
+      <div className="flex flex-col gap-3 mt-10">
         {links.map((list, index) => (
           <a
             href={list.href}
@@ -118,8 +118,8 @@ const Hero = () => {
           >
             <div
               className={`${
-                isClickedList === index ? "w-28 bg-cyan-400" : "w-2"
-              } group-hover:w-28 group-hover:bg-cyan-400 h-1 bg-current rounded-full transition-all duration-300 ease-in-out cursor-pointer}`}
+                isClickedList === index ? "w-28 bg-cyan-400" : "w-3"
+              } group-hover:w-28 group-hover:bg-cyan-400 h-3 bg-current rounded-full transition-all duration-300 ease-in-out cursor-pointer}`}
             ></div>
             <div className="group-hover:text-cyan-400 group-hover:font-bold">
               {list.name}

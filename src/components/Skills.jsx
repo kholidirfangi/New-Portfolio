@@ -15,7 +15,7 @@ const icons = [
     icon: <FaJs />,
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: <RiTailwindCssFill />,
   },
   {
@@ -37,11 +37,11 @@ const Skills = () => {
       >
         SKILLS
       </h2>
-      <div className="flex gap-3 flex-wrap md:text-xl px-5">
+      <div className="relative flex gap-3 flex-wrap md:text-xl px-5">
         {icons.map((item, index) => (
           <div
             key={index}
-            className="flex gap-3 shadow-sm border-2 border-transparent rounded-lg min-w-24 justify-center items-center p-2 hover:text-cyan-400 dark:hover:text-cyan-400 bg-cyan-50 dark:bg-slate-800 dark:text-cyan-100 montserrat-bold hover:border-2 hover:border-cyan-400"
+            className="flex gap-3 shadow-sm border-2 border-transparent rounded-full min-w-24 justify-center items-center p-2 text-white hover:bg-cyan-50 hover:shadow-lg hover:text-cyan-400 dark:hover:text-cyan-400 bg-cyan-400 dark:bg-slate-800 dark:bg-slate-800montserrat-bold hover:border-2 dark:hover:border-cyan-400 duration-200"
           >
             <div>{item.icon}</div>
             <div>{item.name}</div>

@@ -7,7 +7,7 @@ const Projects = () => {
         id="projects-header"
         className="md:text-2xl px-5 py-3 mb-5 xl:hidden dark:text-slate-200"
       >
-        PROJECTS
+        PROJECTS.
       </h2>
       <Card />
     </div>
